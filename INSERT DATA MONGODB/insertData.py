@@ -23,7 +23,7 @@ db = client['Indecopi']
 
 
 records = json.loads(df_reclamos.T.to_json()).values()
-db.Proveedores.insert(records)
+db.Reclamos.insert(records)
 
 records = json.loads(df_sanciones.T.to_json()).values()
 db.Sanciones.insert(records)
